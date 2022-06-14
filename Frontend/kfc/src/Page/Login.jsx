@@ -45,7 +45,7 @@ const Login = () => {
                       <input type="submit" value="Log In" />
                     </div>
                     <div className="redirecttosignup">
-                      <p className="redirectsignuptext">Don't have an account? <Link to={"/Auth/signup"}><span className="redirectsignuplink">Join Now</span></Link></p>
+                      <p className="redirectsignuptext">Don't have an account? <Link to={"/api/Auth/signup"}><span className="redirectsignuplink">Join Now</span></Link></p>
                     </div>
               </form>
           </div>

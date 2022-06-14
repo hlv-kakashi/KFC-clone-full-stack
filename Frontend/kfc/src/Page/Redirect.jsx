@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Redirect = () => {
   return (
     <div style={{ width: "fit-content", margin: "auto", marginTop: "250px" }}>
-      <Link to={"/Auth/login"}>
+      <Link to={"/api/Auth/login"}>
         <button style={{ cursor: "pointer" }}>Click to Login</button>
       </Link>
       <div

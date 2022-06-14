@@ -10,8 +10,8 @@ const AuthRoute = () => {
     <>
       <Routes>
         <Route path="/" element={<Redirect />}></Route>
-        <Route path="/Auth/login" element={<Login />}></Route>
-        <Route path="/Auth/signup" element={<SignUp />}></Route>
+        <Route path="/api/Auth/login" element={<Login />}></Route>
+        <Route path="/api/Auth/signup" element={<SignUp />}></Route>
         {/* page not found */}
         <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
