@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaBeer } from 'react-icons/fa';
 import mainLogo from "../../assets/svg/mainLogo.svg"
 import findKFC from "../../assets/svg/findKFC.svg"
+import signin from "../../assets/svg/signin.svg"
+import cart from "../../assets/svg/cart.svg"
 // import {useSelector} from "react-redux"
 
 const MainFixPartOfNavbar = styled.div`
@@ -20,6 +22,7 @@ width:100vw,
 }
 Link{
     text-decoration:none;
+    cursor:pointer;
 }
 .rightPartTopNav{
     display:flex;
@@ -53,7 +56,7 @@ li > *{
       text-decoration: none;
       color: black;
       padding: 0rem 1.12rem;
-      
+      cursor:pointer;
 }
 p {
       margin: 0;
@@ -62,7 +65,22 @@ p {
       font-weight:700;
       ${'' /* letter-spacing: 2px; */}
 }
-
+.StartButton{
+  margin-right:1.9vw;
+  text-align:center;
+  padding:0px 43px;
+  font-weight:700;
+  font-size:0.95rem;
+  background:#e4002b;
+  color:white;
+  border:none;
+  border-radius:30px;
+  opacity:1;
+  cursor:pointer;
+}
+.StartButton:hover{
+  background:#c12c48;
+}
 `
 
 export const FixedNavbar = () => {
@@ -78,10 +96,14 @@ export const FixedNavbar = () => {
               <Link to={"#"}><p>Menu</p></Link>
               <Link to={"#"}><p>Careers</p></Link>
               <Link to={"#"}><p>About</p></Link>
-              <Link to={"#"}><p>Find A KFC </p> <img height={"10rem"} style={{padding:"0px 5px"}} src={findKFC} alt=""/></Link>
+              <Link to={"#"}><p>Find A KFC </p> <img height={"10rem"} style={{padding:"0px 5px", cursor:"pointer"}} src={findKFC} alt=""/></Link>
             </li>
             <li className='rightPartTopNav'>
-              <Link to={"#"}><img height={"10rem"} style={{padding:"0px 5px"}} src={findKFC} alt=""/></Link>
+              <button className="StartButton" style={{ }}>Start Order</button>
+              <div>
+                <Link to={"#"}><img height={"30rem"} style={{padding:"0.3vw 1vw"}} src={signin} alt=""/></Link>
+                <Link to={"#"}><img height={"30rem"} style={{padding:"0.3vw 1vw"}} src={cart} alt=""/></Link>
+              </div>
             </li>
           </ul>
         </div>
