@@ -16,9 +16,9 @@ const Login = () => {
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="none"
             >
-              <path class="strip-1" d="M0 0h8v20H0z"></path>
-              <path class="strip-2" d="M16 0h8v20h-8z"></path>
-              <path class="strip-3" d="M32 0h8v20h-8z"></path>
+              <path className="strip-1" d="M0 0h8v20H0z"></path>
+              <path className="strip-2" d="M16 0h8v20h-8z"></path>
+              <path className="strip-3" d="M32 0h8v20h-8z"></path>
             </svg>
           </div>
         </div>
