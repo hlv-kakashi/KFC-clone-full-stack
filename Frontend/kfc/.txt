@@ -1,0 +1,5 @@
+1. react-router-dom
+2. react-router-dom@6
+3. npm i react-toastify
+4. Tailwind - npm install -D tailwindcss postcss autoprefixer
+            - npx tailwindcss init -p
