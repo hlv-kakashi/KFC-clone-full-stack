@@ -5,7 +5,7 @@ import { FixedNavbar } from './components/navbar/FixedNavbar';
 function App() {
   return (
     <div className="App">
-      <FixedNavbar/>
+      {/* <FixedNavbar/> */}
       <Footer/>
     </div>
   );

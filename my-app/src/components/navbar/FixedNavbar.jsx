@@ -1,28 +1,44 @@
 import { Link } from "react-router-dom"
 import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FaBeer } from 'react-icons/fa';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FaBeer } from 'react-icons/fa';
 import mainLogo from "../../assets/svg/mainLogo.svg"
 import findKFC from "../../assets/svg/findKFC.svg"
 import signin from "../../assets/svg/signin.svg"
 import cart from "../../assets/svg/cart.svg"
+import redLine from "../../assets/svg/redLine.svg"
 // import {useSelector} from "react-redux"
 
 const MainFixPartOfNavbar = styled.div`
-font-size:16px,
-font-family:"Helvetica Neue", "sans-serif",
-width:100vw,
-
+    ${'' /* font-family:"Helvetica Neue", "sans-serif"; */}
+body{
+  top:200px;
+}
 .firstDiv{
+    font-size:16px;
+    position:fixed;
+    z-index:9;
     width:100vw;
     margin:auto;
     background-color:white;
+}
+.redLineCss{
+  height:1.2rem;
+  position:fixed;
+  display:flex;
+  float:left;
+  margin:0rem 8.6rem;
+  top:0;
+  z-index:10;
 }
 .firstSubDiv{
 }
 Link{
     text-decoration:none;
     cursor:pointer;
+}
+Link:hover{
+  text-decoration: underline;
 }
 .rightPartTopNav{
     display:flex;
@@ -43,7 +59,7 @@ Link{
     font-size:14px;
 }
 ul {
-      margin: 1rem 5rem;
+      margin: 2rem 5rem 1.3rem 5rem;
       list-style: none;
       display: flex;
       color:"black";
@@ -57,6 +73,9 @@ li > *{
       color: black;
       padding: 0rem 1.12rem;
       cursor:pointer;
+}
+li > *:hover{
+  text-decoration: underline;
 }
 p {
       margin: 0;
@@ -89,24 +108,26 @@ export const FixedNavbar = () => {
    
     <div>
       <MainFixPartOfNavbar>
+      <img className="redLineCss" src={redLine} alt=""/>
         <div className="firstDiv">
           <ul className="firstSubDiv">
             <li className='leftPartTopNav'>
               <Link to={"/"}><img src={mainLogo} className='logoImage' alt="" /></Link>
-              <Link to={"#"}><p>Menu</p></Link>
-              <Link to={"#"}><p>Careers</p></Link>
-              <Link to={"#"}><p>About</p></Link>
-              <Link to={"#"}><p>Find A KFC </p> <img height={"10rem"} style={{padding:"0px 5px", cursor:"pointer"}} src={findKFC} alt=""/></Link>
+              <Link to={"/menu"}><p>Menu</p></Link>
+              <Link to={"/careers"}><p>Careers</p></Link>
+              <Link to={"/about"}><p>About</p></Link>
+              <Link to={"/find"}><p>Find A KFC </p> <img height={"10rem"} style={{padding:"0px 5px", cursor:"pointer"}} src={findKFC} alt=""/></Link>
             </li>
             <li className='rightPartTopNav'>
-              <button className="StartButton" style={{ }}>Start Order</button>
+              <div className="StartButton" ><Link to={"/startorder"} style={{color:"white", textDecoration:"none"}} >Start Order</Link></div>
               <div>
-                <Link to={"#"}><img height={"30rem"} style={{padding:"0.3vw 1vw"}} src={signin} alt=""/></Link>
-                <Link to={"#"}><img height={"30rem"} style={{padding:"0.3vw 1vw"}} src={cart} alt=""/></Link>
+                <Link to={"/signin"}><img height={"30rem"} style={{padding:"0.3vw 1vw"}} src={signin} alt=""/></Link>
+                <Link to={"/cart"}><img height={"30rem"} style={{padding:"0.3vw 1vw"}} src={cart} alt=""/></Link>
               </div>
             </li>
           </ul>
         </div>
+        <div></div>
       </MainFixPartOfNavbar>
     </div>
   );

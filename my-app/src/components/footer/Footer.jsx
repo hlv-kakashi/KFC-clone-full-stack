@@ -2,12 +2,19 @@ import React from 'react'
 import styled from 'styled-components'
 
 const FooterStyled = styled.div`
-.container44 {
+.footermaindiv{
     background-color: rgb(32, 33, 36);
-    padding: 50px 250px;
+    width:100vw;
+    height:80vh;
+    bottom:0;
+}
+.container44 {
+    width:80vw;
+    display:grid;
     text-align: justify;
     color: white;
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
+    margin:auto;
 }
 
 p {
@@ -94,8 +101,8 @@ ul>p {
 `
 export const Footer = () => {
     return (
-        <div>
             <FooterStyled>
+        <div className='footermaindiv'>
                 <div className="container44">
                     <p>Calorie Statement</p>
                     <p>2,000 calories a day is used for general nutrition advice, but calorie needs vary. Additional nutrition
@@ -185,8 +192,8 @@ export const Footer = () => {
                         <p> Asessibility Statement</p>
                     </div>
                 </div>
-            </FooterStyled>
         </div>
+            </FooterStyled>
     )
 }
 
