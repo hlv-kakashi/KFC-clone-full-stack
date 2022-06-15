@@ -12,9 +12,9 @@ import location from "../../assets/svg/location.svg"
 
 const MainFixPartOfNavbar = styled.div`
     ${'' /* font-family:"Helvetica Neue", "sans-serif"; */}
-body{
-  top:200px;
-}
+${'' /* body{
+  margin-top:200px ;
+} */}
 .firstDiv{
     font-size:16px;
     position:fixed;
@@ -115,10 +115,10 @@ ${'' /* 2nd navbar for finding location */}
 export const FixedNavbar = () => {
 
   return (
-   
+
     <div>
       <MainFixPartOfNavbar>
-      <img className="redLineCss" src={redLine} alt=""/>
+        <img className="redLineCss" src={redLine} alt="" />
         <div className="firstDiv">
           <ul className="firstSubDiv">
             <li className='leftPartTopNav'>
@@ -126,17 +126,22 @@ export const FixedNavbar = () => {
               <Link to={"/menu"}><p>Menu</p></Link>
               <Link to={"/careers"}><p>Careers</p></Link>
               <Link to={"/about"}><p>About</p></Link>
-              <Link to={"/find"}><p>Find A KFC </p> <img height={"10rem"} style={{padding:"0px 5px", cursor:"pointer"}} src={findKFC} alt=""/></Link>
+              <Link to={"/find"}><p>Find A KFC </p> <img height={"10rem"} style={{ padding: "0px 5px", cursor: "pointer" }} src={findKFC} alt="" /></Link>
             </li>
             <li className='rightPartTopNav'>
-              <div className="StartButton" ><Link to={"/startorder"} style={{color:"white", textDecoration:"none"}} >Start Order</Link></div>
+              <div className="StartButton" ><Link to={"/startorder"} style={{ color: "white", textDecoration: "none" }} >Start Order</Link></div>
               <div>
-                <Link to={"/signin"}><img height={"30rem"} style={{padding:"0.3vw 1vw"}} src={signin} alt=""/></Link>
-                <Link to={"/cart"}><img height={"30rem"} style={{padding:"0.3vw 1vw"}} src={cart} alt=""/></Link>
+                <Link to={"/signin"}><img height={"30rem"} style={{ padding: "0.3vw 1vw" }} src={signin} alt="" /></Link>
+                <Link to={"/cart"}><img height={"30rem"} style={{ padding: "0.3vw 1vw" }} src={cart} alt="" /></Link>
               </div>
             </li>
           </ul>
-        <div className="secondFindNav"><Link to={"/find"} className="secondFindNav1" style={{ fontWeight:"500", alignItems:"center" }}><img height={"20rem"} style={{padding:"2px 10px 0px 0px", cursor:"pointer", flexDirection:"row", alignItems:"center"}} src={location} alt=""/>Start an Order for Pickup or Delivery</Link></div>
+          <div className="secondFindNav">
+            <Link to={"/find"} className="secondFindNav1" style={{ fontWeight: "500", alignItems: "center" }}>
+              <img height={"20rem"} style={{ padding: "2px 10px 0px 0px", cursor: "pointer", flexDirection: "row", alignItems: "center" }} src={location} alt="" />
+              Start an Order for Pickup or Delivery
+            </Link>
+          </div>
         </div>
       </MainFixPartOfNavbar>
     </div>
