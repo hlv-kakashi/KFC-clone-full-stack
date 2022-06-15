@@ -41,7 +41,7 @@ userAuthRouter.post("/login", async (req, res) => {
         lastname: userDetails.lastname,
         email: userDetails.email,
       },
-      "secret@$%#02112022"
+      process.env.SECRET_KEY
     );
     return res.json({ status: "OK", user: token });
   } else {
