@@ -6,7 +6,7 @@ import Temp from './components/Temp';
 function App() {
   return (
     <div className="App">
-      {/* <FixedNavbar/> */}
+      <FixedNavbar/>
       <Footer/>
       {/* <Temp/> */}
     </div>

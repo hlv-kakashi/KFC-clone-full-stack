@@ -7,6 +7,7 @@ import findKFC from "../../assets/svg/findKFC.svg"
 import signin from "../../assets/svg/signin.svg"
 import cart from "../../assets/svg/cart.svg"
 import redLine from "../../assets/svg/redLine.svg"
+import location from "../../assets/svg/location.svg"
 // import {useSelector} from "react-redux"
 
 const MainFixPartOfNavbar = styled.div`
@@ -80,9 +81,7 @@ li > *:hover{
 p {
       margin: 0;
       font-size: 0.89rem;
-      ${'' /* line-height: 27px; */}
       font-weight:700;
-      ${'' /* letter-spacing: 2px; */}
 }
 .StartButton{
   margin-right:1.9vw;
@@ -102,9 +101,14 @@ p {
 }
 ${'' /* 2nd navbar for finding location */}
 .secondFindNav{
-  position:fixed;
-  z-index:9;
-  background:white;
+  background:rgb(32,33,36);
+  ${'' /* background:blue; */}
+  padding:2px;
+}
+.secondFindNav1{
+  color:white;
+  font-size:0.95rem;
+  text-decoration:none;
 }
 `
 
@@ -132,8 +136,8 @@ export const FixedNavbar = () => {
               </div>
             </li>
           </ul>
+        <div className="secondFindNav"><Link to={"/find"} className="secondFindNav1" style={{ fontWeight:"500", alignItems:"center" }}><img height={"20rem"} style={{padding:"2px 10px 0px 0px", cursor:"pointer", flexDirection:"row", alignItems:"center"}} src={location} alt=""/>Start an Order for Pickup or Delivery</Link></div>
         </div>
-        <div className="secondFindNav"><Link to={"/find"}><p>Start an Order for Pickup or Delivery</p></Link></div>
       </MainFixPartOfNavbar>
     </div>
   );
