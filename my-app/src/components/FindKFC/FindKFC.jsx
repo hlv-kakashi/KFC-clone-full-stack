@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import redLine from "../../assets/svg/redLine.svg"
 import styled from 'styled-components'
 import search from "../../assets/svg/search.svg"
 import setting from "../../assets/svg/setting.svg"
-
+import data from "./restaurant.json"
+import RestaurantCard from './RestaurantCard'
 const FindSearchPartStyled = styled.div`
 .findMapPart{
-    padding-top:150px;
+    padding-top:135px;
+    padding-bottom:5px;
     height:100vh;
     width:98vw;
     display:grid;
@@ -63,34 +65,145 @@ const FindSearchPartStyled = styled.div`
     text-decoration:none;
     cursor:pointer;
 }
+.browseOurDirectoryAddres{
+    font-size:17px;
+    width:80%;
+    margin:auto;
+}
+.restaurantCard{
+    height:45vh;
+    overflow:scroll;
+    margin:10px;
+    
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.restaurantCard::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.restaurantCard {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+@media all and (min-width:765px) and (max-width:1595px) {
+.findMapSearch{
+    overflow:scroll;
+}
+.restaurantCard{
+    height:45vh;
+    overflow:none;
+    margin:10px;
+    
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.findMapSearch::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.findMapSearch {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+}
+
+@media all and (min-width:0px) and (max-width:765px) {
+.findMapPart{
+    padding-top:135px;
+    padding-bottom:5px;
+    height:fit-content;
+    width:98vw;
+    display:block;
+    ${'' /* grid-template-columns:1fr; */}
+
+}
+.mapIframe{
+    position: -webkit-sticky;
+    position: sticky;
+    width:95vw;
+    height:100vh;
+    margin:10px;
+    justify-content:center;
+
+}
+
+}
 `
 const FindKFC = () => {
-  return (
-    <FindSearchPartStyled>
-        <div className='findMapPart'>
-            <div className='findMapSearch'>
-                <img className="redLineCss" src={redLine} alt=""/>
-                <p style={{letterSpacing:"1px", fontFamily:"fantasy", fontWeight:"100",fontSize:"32px"}}>Find a KFC Location</p>
-                <p style={{letterSpacing:"1px", fontFamily:"sans-serif,Roboto", fontWeight:"600",fontSize:"15px"}}>SEARCH BY CITY AND STATE OR ZIP CODE</p>
-                <div className='inputSearchForLocationDiv'>
-                    <input className='inputSearchForLocation' type="text" placeholder="Louisville, KY" />
-                    <img height={"25rem"} style={{ padding: "0vw 1vw", cursor:"pointer" }} src={search} alt="" />
-                    <img height={"25rem"} style={{ padding: "0vw 1vw", cursor:"pointer" }} src={setting} alt="" />
-                </div>
-                <div> <br/>
-                        <u className="useLocation">USE MY LOCATION</u>
+    const [textL, setTextL] = useState("Pune")
+    const [location, setLocation] = useState([])
+    const [address, setAddress] = useState("")
+
+    //Geological Location Code for co-ordinates
+    const out = (lat, lng) => {
+        fetch(`https://us1.locationiq.com/v1/reverse.php?key=pk.456518217705258731c8c7089e3a45d0&lat=${lat}&lon=${lng}&format=json`)
+            .then((e) => e.json())
+            .then((d) => (
+                setAddress(d.display_name),
+                setTextL(d)
+                // ,
+                // console.log(address)
+            ))
+    }
+    // setTimeout(()=>{
+
+    // },1000)
+    const handleLocation = (el) => ( setTextL(el),setAddress(el) );
+    const findLocat = setTimeout((event) => { event.preventDefault() },3000);
+    const UseMyGeoLocation = () => { navigator.geolocation.getCurrentPosition(function (position) { out(position.coords.latitude, position.coords.longitude) }) };
+
+    return (
+        <FindSearchPartStyled>
+            <div className='findMapPart'>
+                <div className='findMapSearch'>
+                    <img className="redLineCss" src={redLine} alt="" />
+                    <p style={{ letterSpacing: "1px", fontFamily: "fantasy", fontWeight: "100", fontSize: "32px" }}>Find a KFC Location</p>
+                    <p style={{ letterSpacing: "1px", fontFamily: "sans-serif,Roboto", fontWeight: "600", fontSize: "15px" }}>SEARCH BY CITY AND STATE OR ZIP CODE</p>
+                    <div className='inputSearchForLocationDiv'>
+                        <form onSubmit={findLocat}>
+                            <input className='inputSearchForLocation' type="text" placeholder="Louisville, KY" onChange={(e) => handleLocation(e.target.value)} />
+                            <img height={"25rem"} style={{ padding: "0vw 1vw", cursor: "pointer" }} src={search} onClick={handleLocation} alt="" />
+                            <img height={"25rem"} style={{ padding: "0vw 1vw", cursor: "pointer" }} src={setting} alt="" />
+                        </form>
+                    </div>
+                    <div> <br />
+                        <u className="useLocation" onClick={UseMyGeoLocation}>USE MY LOCATION</u>
                     </div>
 
-                    <div className="browseOurDirectory"> <br/> <br/>
-                        Use our locator to find a location near you or <u className="browseOurDirectory1">browse our directory. </u> 
+                    <div className="browseOurDirectory"> <br />
+                        {address ? (
+                            <>
+                            <div className="browseOurDirectoryAddres"><b>Current Location:</b> {address}</div>
+                            <div className='restaurantCard'>                                
+                                {   
+                                    data.restaurantDetails.map((e)=><RestaurantCard {...e}/>)
+                                }
+                            </div>
+                            </>
+                        ) : (
+                            <>
+                                Use our locator to find a location near you or <u className="browseOurDirectory1">browse our directory. </u>
+                            </>
+                        )}
                     </div>
+                </div>
+                <div className='mapDisplaySearch'>
+                    <iframe
+                        className='mapIframe'
+                        title="Map of City"
+                        loading="lazy"
+                        allowFullScreen
+                        referrerPolicy="no-referrer-when-downgrade"
+                        src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyAq15HbfCRMW7RqNb5LUNyOLyfzpYI0wl4&q=${textL}`}>
+
+                    </iframe>
+
+                </div>
             </div>
-            <div className='mapDisplaySearch'>
-                <img className='mapIframe' src='https://bostonraremaps.com/wp-content/uploads/2015/08/2058a-roessler-united-states-1868.jpg' alt='' />
-            </div>
-        </div>
-    </FindSearchPartStyled>
-  )
+        </FindSearchPartStyled>
+    )
 }
 
 export default FindKFC
