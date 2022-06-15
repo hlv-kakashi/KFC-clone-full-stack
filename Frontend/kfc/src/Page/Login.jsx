@@ -1,9 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import "../styles/login.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  async function loginUser(event) {
+    event.preventDefault();
+    const response = await fetch("http://localhost:8080/Auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    });
+    const data = await response.json();
+
+    if (data.user) {
+      alert("Login Successful");
+      window.location.href = "/";
+    } else {
+      alert("Please check your username and password");
+    }
+    console.log("data:", data);
+  }
+
   return (
     <>
       <Header />
@@ -25,29 +51,53 @@ const Login = () => {
         <div className="loginmainbox">
           <h1 id="loginTitle">LOG IN TO KFC</h1>
           <div className="loginFormdiv">
-              <form action="" id="loginForm">
-                    <div className="input-data">
-                          <input type="email" name="email" id="email" required/>
-                          {/* <div className="underline"></div> */}
-                          <label>Email</label>
-                    </div>
-                    <div id="loginerrorBox"></div>
-                    <div className="input-data">
-                          <input type="password" name="password" id="password" required/>
-                          {/* <div className="underline"></div> */}
-                          <label>Password</label>
-                    </div>
-                    <div id="loginerrorBox"></div>
-                    <div className="loginterms">
-                        <p className="logintermtext">By logging into the application or proceeding as a guest, you agree to our <span className="logintermlink">Privacy Policy</span> and <span className="logintermlink">Terms of Use</span>.</p>
-                    </div>
-                    <div className="loginBtndiv">
-                      <input type="submit" value="Log In" />
-                    </div>
-                    <div className="redirecttosignup">
-                      <p className="redirectsignuptext">Don't have an account? <Link to={"/api/Auth/signup"}><span className="redirectsignuplink">Join Now</span></Link></p>
-                    </div>
-              </form>
+            <form onSubmit={loginUser} id="loginForm">
+              <div className="input-data">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                {/* <div className="underline"></div> */}
+                <label>Email</label>
+              </div>
+              <div id="loginerrorBox"></div>
+              <div className="input-data">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+                {/* <div className="underline"></div> */}
+                <label>Password</label>
+              </div>
+              <div id="loginerrorBox"></div>
+              <div className="loginterms">
+                <p className="logintermtext">
+                  By logging into the application or proceeding as a guest, you
+                  agree to our{" "}
+                  <span className="logintermlink">Privacy Policy</span> and{" "}
+                  <span className="logintermlink">Terms of Use</span>.
+                </p>
+              </div>
+              <div className="loginBtndiv">
+                <input type="submit" value="Log In" />
+              </div>
+              <div className="redirecttosignup">
+                <p className="redirectsignuptext">
+                  Don't have an account?{" "}
+                  <Link to={"/api/Auth/signup"}>
+                    <span className="redirectsignuplink">Join Now</span>
+                  </Link>
+                </p>
+              </div>
+            </form>
           </div>
         </div>
       </section>

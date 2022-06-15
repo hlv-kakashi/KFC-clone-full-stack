@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import "../styles/signup.css";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  async function registerUser(event) {
+    event.preventDefault();
+    const response = await fetch("http://localhost:8080/Auth/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstname,
+        lastname,
+        email,
+        password,
+      }),
+    });
+    const data = await response.json();
+    console.log("data:", data);
+  }
   return (
     <>
       <Header />
@@ -25,27 +47,51 @@ const SignUp = () => {
         <div className="signupmainbox">
           <h1 id="signupTitle">CREATE AN ACCOUNT</h1>
           <div className="signupformdiv">
-            <form action="" className="signupform">
+            <form onSubmit={registerUser} className="signupform">
               <div className="input-data">
-                <input type="text" required />
+                <input
+                  type="text"
+                  value={firstname}
+                  onChange={(e) => setFirstname(e.target.value)}
+                  required
+                />
                 {/* <div className="underline"></div> */}
                 <label>First Name*</label>
               </div>
               <div id="signuperrorBox"></div>
               <div className="input-data">
-                <input type="text" required />
+                <input
+                  type="text"
+                  value={lastname}
+                  onChange={(e) => setLastname(e.target.value)}
+                  required
+                />
                 {/* <div className="underline"></div> */}
                 <label>Last Name*</label>
               </div>
               <div id="signuperrorBox"></div>
               <div className="input-data">
-                <input type="email" name="email" id="email" required />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
                 {/* <div className="underline"></div> */}
                 <label>Email*</label>
               </div>
               <div id="signuperrorBox"></div>
               <div className="input-data">
-                <input type="password" name="password" id="password" required />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
                 {/* <div className="underline"></div> */}
                 <label>Password*</label>
               </div>
