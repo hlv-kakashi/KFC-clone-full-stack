@@ -100,6 +100,12 @@ p {
 .StartButton:hover{
   background:#c12c48;
 }
+${'' /* 2nd navbar for finding location */}
+.secondFindNav{
+  position:fixed;
+  z-index:9;
+  background:white;
+}
 `
 
 export const FixedNavbar = () => {
@@ -127,7 +133,7 @@ export const FixedNavbar = () => {
             </li>
           </ul>
         </div>
-        <div></div>
+        <div className="secondFindNav"><Link to={"/find"}><p>Start an Order for Pickup or Delivery</p></Link></div>
       </MainFixPartOfNavbar>
     </div>
   );
