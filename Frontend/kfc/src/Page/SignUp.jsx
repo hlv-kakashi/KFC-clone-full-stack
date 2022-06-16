@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import "../styles/signup.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  let navigate = useNavigate();
 
   async function registerUser(event) {
     event.preventDefault();
@@ -24,6 +28,13 @@ const SignUp = () => {
       }),
     });
     const data = await response.json();
+    if (data.user) {
+      alert("Acc Created");
+      const timer = setTimeout(() => {
+        navigate("/api/Auth/login");
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
     console.log("data:", data);
   }
   return (
@@ -133,6 +144,7 @@ const SignUp = () => {
           </div>
         </div>
       </section>
+      <ToastContainer />
     </>
   );
 };

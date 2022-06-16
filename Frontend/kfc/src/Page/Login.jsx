@@ -1,11 +1,32 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import "../styles/login.css";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const notify = () =>
+    toast.success("Login Successful", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  const notify2 = () =>
+    toast.warning("Please check Email or Password", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      newestOnTop: false,
+      rtl: false,
+    });
+  let navigate = useNavigate();
 
   async function loginUser(event) {
     event.preventDefault();
@@ -20,12 +41,15 @@ const Login = () => {
       }),
     });
     const data = await response.json();
-
     if (data.user) {
-      alert("Login Successful");
-      window.location.href = "/";
+      localStorage.setItem("token", data.user);
+      notify();
+      const timer = setTimeout(() => {
+        navigate("/");
+      }, 2000);
+      return () => clearTimeout(timer);
     } else {
-      alert("Please check your username and password");
+      notify2();
     }
     console.log("data:", data);
   }
@@ -101,6 +125,7 @@ const Login = () => {
           </div>
         </div>
       </section>
+      <ToastContainer />
     </>
   );
 };
