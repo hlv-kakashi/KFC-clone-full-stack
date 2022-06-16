@@ -1,0 +1,15 @@
+.menumain{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 90%;
+    margin-left: auto;
+    gap:60px;
+    justify-content: space-around;
+}
+
+@media all and (max-width:780px){
+    .menumain{
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
