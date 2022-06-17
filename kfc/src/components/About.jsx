@@ -18,8 +18,8 @@ const About = () => {
                             </svg>
                         </figure>
                         <div className='flex relative'>
-                        <h1 className={styles.title}>If You Like Fried Chicken, This Is Why</h1>
-                        <img className='absolute right-[.4rem] top-[40%] w-[503px] h-[660px]' src="https://images.ctfassets.net/9tka4b3550oc/2MBv3A7EZ95fODNjqOslhy/dc0288979cf0089a47d995152f4db2ee/hero-about.jpg?w=640" alt="Colonel Sanders frying chicken in a cast iron skillet on a stove" />
+                            <h1 className={styles.title}>If You Like Fried Chicken, This Is Why</h1>
+                            <img className='absolute right-[.4rem] top-[40%] w-[503px] h-[660px]' src="https://images.ctfassets.net/9tka4b3550oc/2MBv3A7EZ95fODNjqOslhy/dc0288979cf0089a47d995152f4db2ee/hero-about.jpg?w=640" alt="Colonel Sanders frying chicken in a cast iron skillet on a stove" />
                         </div>
                     </div>
                 </div>
@@ -46,23 +46,23 @@ const About = () => {
                         </svg>
                     </figure>
                     <div className='flex'>
-                   
-                    <div className={styles.made_image}>
-                        <div className={styles.made_badge}>
-                            <img src="https://images.ctfassets.net/9tka4b3550oc/pUxlFVRTxLtL5kOkls4oR/79e616624a7269fa05b88538b8d5f305/herbs-badge.png" alt="Herbs &amp; Spices" />
+
+                        <div className={styles.made_image}>
+                            <div className={styles.made_badge}>
+                                <img src="https://images.ctfassets.net/9tka4b3550oc/pUxlFVRTxLtL5kOkls4oR/79e616624a7269fa05b88538b8d5f305/herbs-badge.png" alt="Herbs &amp; Spices" />
+                            </div>
+                            <div >
+                                <img loading="lazy" src="https://images.ctfassets.net/9tka4b3550oc/1FQSRLVXt2Q1lvXXkOyW6U/f306561ef7bfc5ab7c84a739a46d3629/Food_09.png?q=75&amp;w=960" alt="" aria-hidden="true" />
+                            </div>
                         </div>
-                        <div >
-                            <img  loading="lazy" src="https://images.ctfassets.net/9tka4b3550oc/1FQSRLVXt2Q1lvXXkOyW6U/f306561ef7bfc5ab7c84a739a46d3629/Food_09.png?q=75&amp;w=960" alt="" aria-hidden="true" />
+                        <div className={styles.content}>
+                            <div className={styles.food_main}>Our Food</div>
+                            <h2 className="text-[60px] text-left font-extrabold">We Make it the Hard Way</h2>
+                            <p>See what goes into making our world famous fried chicken.</p>
+                            <a className={styles.Button_button__26DMW} data-type="secondary" data-disabled="false" tabindex="0" href="/about/how-we-make-chicken">
+                                <div>Learn More</div>
+                            </a>
                         </div>
-                    </div>
-                    <div className={styles.content}>
-                        <div className={styles.food_main}>Our Food</div>
-                        <h2 className="text-[60px] text-left font-extrabold">We Make it the Hard Way</h2>
-                        <p>See what goes into making our world famous fried chicken.</p>
-                        <a className={styles.Button_button__26DMW} data-type="secondary" data-disabled="false" tabindex="0" href="/about/how-we-make-chicken">
-                            <div>Learn More</div>
-                        </a>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -70,17 +70,17 @@ const About = () => {
             {/* Third Part */}
 
             <div className='mt-[10rem] flex gap-0'>
-            <img src="https://images.ctfassets.net/9tka4b3550oc/2Qk8bdug8e1FNxFt4nMuGv/bf7736702d142e7fd42076f889fd206b/about-story-narrow.png?w=640" alt="Top: Sanders in an early franchise. Bottom: Sanders waving while driving" />
-            <div>
-            <h2 className='text-7xl mr-[8rem] pr-[8rem]'>The Man,<br />
-            The Myth,<br />The Legend</h2>  
+                <img src="https://images.ctfassets.net/9tka4b3550oc/2Qk8bdug8e1FNxFt4nMuGv/bf7736702d142e7fd42076f889fd206b/about-story-narrow.png?w=640" alt="Top: Sanders in an early franchise. Bottom: Sanders waving while driving" />
+                <div>
+                    <h2 className='text-7xl mr-[8rem] pr-[8rem]'>The Man,<br />
+                        The Myth,<br />The Legend</h2>
+                </div>
+
             </div>
-                
-            </div>
             <br />
             <br />
             <br />
-            <span className='ml-[50rem] text-2xl mt-8'>In The Beginning</span>  
+            <span className='ml-[50rem] text-2xl mt-8'>In The Beginning</span>
 
             <div className={styles.story_narrow}>
                 <div className={styles.story_narrow_wrapper}>
@@ -89,10 +89,10 @@ const About = () => {
                         <div className={styles.divider_PbktM}>
                             {/* <span className={styles.third_2U0Y2}>In The Beginning</span> */}
                             <span className={styles.third_27neZ} pt-20 >
-                            <p className='w-[30%] ml-[42.2rem] mt-10'>It all began with the man, the myth, the legend himself. In 1930, in a humble service station in Corbin, Kentucky, 40-year old Harland Sanders began feeding hungry travellers. Sanders spent the next nine years (now that's dedication) perfecting his secret blend of 11 herbs and spices, as well as the basic cooking technique we still use today. There are now over 24,000 KFC outlets in more than 145 countries and territories around the world.</p>
+                                <p className='w-[30%] ml-[42.2rem] mt-10'>It all began with the man, the myth, the legend himself. In 1930, in a humble service station in Corbin, Kentucky, 40-year old Harland Sanders began feeding hungry travellers. Sanders spent the next nine years (now that's dedication) perfecting his secret blend of 11 herbs and spices, as well as the basic cooking technique we still use today. There are now over 24,000 KFC outlets in more than 145 countries and territories around the world.</p>
                             </span>
                         </div>
-                        
+
                     </div>
                     {/* <div className={styles.story_narrow_image}>
                         <img src="https://images.ctfassets.net/9tka4b3550oc/2Qk8bdug8e1FNxFt4nMuGv/bf7736702d142e7fd42076f889fd206b/about-story-narrow.png?w=640" alt="Top: Sanders in an early franchise. Bottom: Sanders waving while driving" />
@@ -103,38 +103,7 @@ const About = () => {
 
             {/* Fourth Part */}
             <div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />           
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 <img src={img1} alt="jndnndj" />
             </div>
 
@@ -154,45 +123,9 @@ const About = () => {
 
             {/* Fifth Part */}
             <div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            
-           
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
                 <img className="w-[100%]" src={img2} alt="img2" />
             </div>
 
@@ -218,49 +151,12 @@ const About = () => {
 
             {/* Sixth Part */}
             <div>
-            
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            
+
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
                 <img src={img3} alt="img3" />
             </div>
-{/* 
+            {/* 
             <div className={styles.sixth_vMd}>
                 <div>
                     <div className={styles.sixth_PbktM}>
@@ -287,41 +183,7 @@ const About = () => {
             {/* Seventh Part */}
 
             <div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 <img src={img4} alt="img4" />
             </div>
 
