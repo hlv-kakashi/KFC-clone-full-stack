@@ -3,19 +3,23 @@ import styles from "./item.module.css"
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux';
 import { addcart, addcartcount } from '../redux/action';
+import { useNavigate } from 'react-router-dom';
 
 const Item = ({_id,image,price,title,desc}) => {
     const [count,setCount]= useState(0)
+    const navigate= useNavigate();
     const cart= useSelector((state)=>state.cart);
     const dispatch = useDispatch();
   return (
     <div className={styles.innerbox} >
-      <img src={image} alt="food" />
+      <img onClick={()=>{
+        navigate(`/menu/${_id}`)
+      }} src={image} alt="food" />
       <div>
-        <h2>{title}</h2>
+        <h3 className={styles.title} >{title}</h3>
         <p><span style={{fontSize:"11px",background:"red",color:"red",borderRadius:"50%"}} >12</span> Non veg</p>
-        <h2>{price}</h2>       
-        <p>{desc}</p>
+        <h3>{price}</h3>       
+        <p className={styles.desc} >{desc}</p>
         <div className={styles.cartbutton}
         
         >

@@ -1,4 +1,5 @@
 import React from "react";
+import Bottom from "../cart_components/Bottom";
 import Leftside from "../cart_components/Leftside";
 import RightSide from "../cart_components/RightSide";
 import "./Cart.css";
@@ -19,6 +20,7 @@ const Cart = () => {
           <RightSide/>
         </div>
       </div>
+      <Bottom/>
     </div>
   );
 };

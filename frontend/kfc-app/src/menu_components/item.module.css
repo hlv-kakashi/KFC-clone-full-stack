@@ -10,6 +10,9 @@
     margin-top: 10px;
     color:white;
 }
+.innerbox{
+    margin-bottom: 20px;
+}
 .innerbox>img{
     width: 275px;
     height: 210px;
@@ -56,6 +59,31 @@
  text-decoration: underline;
 }
 
+.desc{
+    height:60px;
+    font-size: 14px;
+    width: 80%;
+    
+}
+.title{
+    height: 40px;
+  
+}
+
+.searchbox>input{
+  border-radius: 50px;
+  height: 35px;
+  width: 216px;
+  font-size: 18px;
+  border: 1px solid lightgrey;
+}
+
+.searchbox{
+    border-bottom: 4px solid black;
+    width: 87%;
+   padding-bottom: 20px;
+}
+
 @media all and (max-width:780px){
     .sidebox{
         display: flex;
@@ -78,6 +106,7 @@
         width: 100%;
         /* gap:200px; */
     }
+    
    .innerbox>img{
     height: auto;
     width: 100%;

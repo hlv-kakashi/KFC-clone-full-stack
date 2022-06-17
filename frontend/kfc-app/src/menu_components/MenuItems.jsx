@@ -6,6 +6,7 @@ import Burger from "./Burger"
 import Chicken from "./Chicken"
 import NewLaunch from "./NewLaunch"
 import Rolls from "./Rolls"
+import SearchBox from "./SearchBox"
 import Snacks from "./Snacks"
 import StayHome from "./StayHome"
 
@@ -17,6 +18,7 @@ export const MenuItem= ()=>{
 
 return(
     <div>
+        <SearchBox/>
         <Chicken/>
         <NewLaunch/>
         <Rolls/>

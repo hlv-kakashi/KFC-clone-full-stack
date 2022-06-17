@@ -30,6 +30,11 @@ app.get("/menu", async (req,res)=>{
   res.json(items);
 })
 
+app.get("/menu/:id", async(req,res)=>{
+  let {id}= req.params;
+  let only= await Menu.find({_id:id});
+  return res.json(only);
+})
 
 app.post("/cart",async (req,res)=>{
   await Cart.insertMany(req.body);

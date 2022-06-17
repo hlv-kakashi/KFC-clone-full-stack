@@ -10,6 +10,7 @@ const menuSchema= new mongoose.Schema({
     type:String
 })
 
+
 const Menu= mongoose.model("menu",menuSchema)
 
 
