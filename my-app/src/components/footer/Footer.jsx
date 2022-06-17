@@ -97,6 +97,8 @@ ul>p {
         height:fit-Content;
         bottom:0;
         padding:2% 0% 0% 0%;
+        margin:auto;
+        ${'' /* text-align:center; */}
     }
     .container44 {
         width:90vw;
@@ -113,10 +115,13 @@ ul>p {
         overflow: hidden;
         text-align: center;
         bottom:0;
+        width:95%;
     }
     .cards44:nth-child(1){
+       width:fit-content;
        height: 150px;
-       ${'' /* margin-left:-60px; */}
+       margin:auto;
+       ${'' /* margin-left:4%; */}
 
     }
     i{
@@ -144,20 +149,20 @@ ul>p {
 `
 export const Footer = () => {
     return (
-            <FooterStyled>
-        <div className='footermaindiv'>
+        <FooterStyled>
+            <div className='footermaindiv'>
                 <div className="container44">
                     <p>Calorie Statement</p>
                     <p>2,000 calories a day is used for general nutrition advice, but calorie needs vary. Additional nutrition
-                        information available upon request in-store and on kfc.com.<br/> Prices, participation, and product availability
+                        information available upon request in-store and on kfc.com.<br /> Prices, participation, and product availability
                         may vary.</p>
                     <br />
-                    <p>Pepsi, Pepsi Globe, Mtn Dew, Mtn Dew Sweet Lightning, Sierra Mist are registered trademarks of PepsiCo, Inc.<br/>
+                    <p>Pepsi, Pepsi Globe, Mtn Dew, Mtn Dew Sweet Lightning, Sierra Mist are registered trademarks of PepsiCo, Inc.<br />
                         Dr Pepper is a registered trademark of Dr Pepper/Seven Up, Inc.</p>
                     <br />
                     <div className="boxes44">
                         <div className="cards44">
-                        <img height={"110rem"} style={{padding:"0px 5px", cursor:"pointer"}} src={footkfc} alt=""/>
+                            <img height={"110rem"} style={{ padding: "0px 5px", cursor: "pointer" }} src={footkfc} alt="" />
                         </div>
                         <div className="cards44">
                             <ul>
@@ -225,23 +230,23 @@ export const Footer = () => {
                         <div className='lastLinefoot'>
                             <p>Copyright © KFC Corporation 2022 All Rights Reserved</p>
                         </div>
-                        <div style={{ display: "flex" }}  className='lastLinefoot'>
-                        <Link to={"https://www.instagram.com/_mad___boxer_/"}><img height={"30rem"} style={{padding:"0.3vw 1vw"}} src={instagram} alt=""/></Link>
-                        <Link to={"https://www.facebook.com/people/Arshad-Khan/100004164048208/"}><img height={"30rem"} style={{padding:"0.3vw 1vw"}} src={facebook} alt=""/></Link>
-                        <Link to={"https://www.linkedin.com/in/md-arshad-khan-350206154/"}><img height={"30rem"} style={{padding:"0.3vw 1vw"}} src={twitter} alt=""/></Link>
+                        <div style={{ display: "flex" }} className='lastLinefoot'>
+                            <Link to={"https://www.instagram.com/_mad___boxer_/"}><img height={"30rem"} style={{ padding: "0.3vw 1vw" }} src={instagram} alt="" /></Link>
+                            <Link to={"https://www.facebook.com/people/Arshad-Khan/100004164048208/"}><img height={"30rem"} style={{ padding: "0.3vw 1vw" }} src={facebook} alt="" /></Link>
+                            <Link to={"https://www.linkedin.com/in/md-arshad-khan-350206154/"}><img height={"30rem"} style={{ padding: "0.3vw 1vw" }} src={twitter} alt="" /></Link>
                         </div>
                     </div>
                     <div style={{ borderLeft: "gray" }} className='lastLinefoot'>
                         <p> Asessibility Statement</p>
                     </div>
                 </div>
-                <div style={{ display: "flex" }}  className='lastLinefootsvg'>
-                    <Link to={"https://www.instagram.com/_mad___boxer_/"}><img height={"30rem"} style={{padding:"0.3vw 1vw"}} src={instagram} alt=""/></Link>
-                    <Link to={"https://www.facebook.com/people/Arshad-Khan/100004164048208/"}><img height={"30rem"} style={{padding:"0.3vw 1vw"}} src={facebook} alt=""/></Link>
-                    <Link to={"https://www.linkedin.com/in/md-arshad-khan-350206154/"}><img height={"30rem"} style={{padding:"0.3vw 1vw"}} src={twitter} alt=""/></Link>
+                <div style={{ display: "flex" }} className='lastLinefootsvg'>
+                    <Link to={"https://www.instagram.com/_mad___boxer_/"}><img height={"30rem"} style={{ padding: "0.3vw 1vw" }} src={instagram} alt="" /></Link>
+                    <Link to={"https://www.facebook.com/people/Arshad-Khan/100004164048208/"}><img height={"30rem"} style={{ padding: "0.3vw 1vw" }} src={facebook} alt="" /></Link>
+                    <Link to={"https://www.linkedin.com/in/md-arshad-khan-350206154/"}><img height={"30rem"} style={{ padding: "0.3vw 1vw" }} src={twitter} alt="" /></Link>
                 </div>
-        </div>
-            </FooterStyled>
+            </div>
+        </FooterStyled>
     )
 }
 

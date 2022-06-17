@@ -7,7 +7,7 @@ import data from "./restaurant.json"
 import RestaurantCard from './RestaurantCard'
 const FindSearchPartStyled = styled.div`
 .findMapPart{
-    padding-top:135px;
+    padding-top:100px;
     padding-bottom:5px;
     height:100vh;
     width:98vw;
@@ -39,6 +39,7 @@ const FindSearchPartStyled = styled.div`
     font-size: 18px;
     text-decoration: italic;
     height:30px;
+    outline: none;
 }
 .inputSearchForLocationDiv{
     position:sticky;
@@ -86,6 +87,12 @@ const FindSearchPartStyled = styled.div`
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+.inputSearchForLocationImg1{
+    height:27px;
+}
+.inputSearchForLocationImg2{
+    height:25px;
+}
 @media all and (min-width:765px) and (max-width:1595px) {
 .findMapSearch{
     overflow:scroll;
@@ -111,7 +118,7 @@ const FindSearchPartStyled = styled.div`
 
 @media all and (min-width:0px) and (max-width:765px) {
 .findMapPart{
-    padding-top:135px;
+    padding-top:100px;
     padding-bottom:5px;
     height:fit-content;
     width:98vw;
@@ -121,12 +128,70 @@ const FindSearchPartStyled = styled.div`
 }
 .mapIframe{
     position: -webkit-sticky;
-    position: sticky;
     width:95vw;
     height:100vh;
     margin:10px;
     justify-content:center;
 
+}
+
+}
+
+@media all and (min-width:760px) and (max-width:1100px) {
+    
+.inputSearchForLocation{
+    width: 70%;
+    height:fit-content;
+}
+.inputSearchForLocationDiv{
+    width:fit-content;
+}
+.inputSearchForLocationImg1{
+    height:23px;
+}
+.inputSearchForLocationImg2{
+    ${'' /* visibility:hidden; */}
+    height:23px;
+}
+}
+@media all and (min-width:1100px) and (max-width:1230px) {
+.inputSearchForLocation{
+    width: 50%;
+    height:fit-content;
+}
+.inputSearchForLocationDiv{
+    width:fit-content;
+}
+.inputSearchForLocationImg1{
+    height:23px;
+}
+.inputSearchForLocationImg2{
+    ${'' /* visibility:hidden; */}
+    height:23px;
+}
+}
+
+@media all and (min-width:0px) and (max-width:415px) {
+.inputSearchForLocation{
+    width: 70%;
+    height:fit-content;
+}
+.inputSearchForLocationDiv{
+    width:fit-content;
+}
+.inputSearchForLocationImg1{
+    height:15px;
+}
+.inputSearchForLocationImg2{
+    ${'' /* visibility:hidden; */}
+    height:15px;
+}
+}
+
+${'' /* toggle nav querry */}
+@media all and (min-width:0px) and (max-width:1100px) {
+.findMapPart{
+    padding-top:100px;
 }
 
 }
@@ -151,7 +216,7 @@ const FindKFC = () => {
 
     // },1000)
     const handleLocation = (el) => ( setTextL(el),setAddress(el) );
-    const findLocat = setTimeout((event) => { event.preventDefault() },3000);
+    const findLocat =(event) => { event.preventDefault()};
     const UseMyGeoLocation = () => { navigator.geolocation.getCurrentPosition(function (position) { out(position.coords.latitude, position.coords.longitude) }) };
 
     return (
@@ -164,11 +229,11 @@ const FindKFC = () => {
                     <div className='inputSearchForLocationDiv'>
                         <form onSubmit={findLocat}>
                             <input className='inputSearchForLocation' type="text" placeholder="Louisville, KY" onChange={(e) => handleLocation(e.target.value)} />
-                            <img height={"25rem"} style={{ padding: "0vw 1vw", cursor: "pointer" }} src={search} onClick={handleLocation} alt="" />
-                            <img height={"25rem"} style={{ padding: "0vw 1vw", cursor: "pointer" }} src={setting} alt="" />
+                            <img className='inputSearchForLocationImg1' style={{ padding: "0vw 1vw", cursor: "pointer" }} src={search} onClick={handleLocation} alt="" />
+                            <img className='inputSearchForLocationImg2' style={{ padding: "0vw 1vw", cursor: "pointer" }} src={setting} alt="" />
                         </form>
                     </div>
-                    <div> <br />
+                    <div> <br/>
                         <u className="useLocation" onClick={UseMyGeoLocation}>USE MY LOCATION</u>
                     </div>
 
