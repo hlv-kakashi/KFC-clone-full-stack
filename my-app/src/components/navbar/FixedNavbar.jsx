@@ -287,29 +287,29 @@ export const FixedNavbar = () => {
               <p style={{ letterSpacing: "1px", fontFamily: "fantasy", fontSize: "32px", textAlign:"left", padding:"20px 20px 10px 5vw" }}>LET'S GET COOKIN'</p>
               <h4 style={{textAlign:"left", paddingLeft:"5vw"}}>Sign In / Sign Up <img height={"7rem"} style={{alignItems:"center"}} src={menuarrowsmall} alt="" /></h4>
               <div className="MenuPartDiv ">
-                <p className="SmallMediaLinks" style={{padding:"20px"}}><Link to={"/menu"} >MENU</Link></p>
+                <p className="SmallMediaLinks" style={{padding:"20px"}}><Link  onClick={()=>handleMenuOptionsClose()}  to={"/menu"} >MENU</Link></p>
                 <img className="MenuPartImg" src={menu1} alt=""/>
               </div>
               <div className="MenuPartDiv ">
-                <p className="SmallMediaLinks" style={{padding:"20px"}}><Link to={"/careers"} >CAREERS</Link></p>
+                <p className="SmallMediaLinks" style={{padding:"20px"}}><Link  onClick={()=>handleMenuOptionsClose()}  to={"/careers"} >CAREERS</Link></p>
                 <img className="MenuPartImg" src={menu2} alt=""/>
               </div>
               <div className="MenuPartDiv ">
-                <p className="SmallMediaLinks" style={{padding:"20px"}}><Link to={"/about"} >ABOUT</Link></p>
+                <p className="SmallMediaLinks" style={{padding:"20px"}}><Link  onClick={()=>handleMenuOptionsClose()}  to={"/about"} >ABOUT</Link></p>
                 <img className="MenuPartImg" src={menu3} alt=""/>
               </div>
               <div className="MenuPartDiv ">
-                <p className="SmallMediaLinks" style={{padding:"20px"}}><Link to={"/find"} >FIND A KFC</Link><img height={"10rem"} style={{ padding: "0px 5px", cursor: "pointer" }} src={findKFC} alt="" /></p>
+                <p className="SmallMediaLinks" style={{padding:"20px"}}><Link  onClick={()=>handleMenuOptionsClose()}  to={"/find"} >FIND A KFC</Link><img height={"10rem"} style={{ padding: "0px 5px", cursor: "pointer" }} src={findKFC} alt="" /></p>
                 <img className="MenuPartImg" src={menu4} alt=""/>
               </div>
               <div className="MenuPartDiv " style={{height:"fit-content", display:"flex"}}>
-                <p className="SmallMediaLinks" style={{padding:"20px"}}><Link to={"/more"} >MORE</Link><img height={"8rem"} style={{ padding: "0px 5px", cursor: "pointer" }} src={downArrow} alt="" /></p>
+                <p className="SmallMediaLinks" style={{padding:"20px"}}><Link  onClick={()=>handleMenuOptionsClose()}  to={"/more"} >MORE</Link><img height={"8rem"} style={{ padding: "0px 5px", cursor: "pointer" }} src={downArrow} alt="" /></p>
               </div>
               <div className="MenuPartDivImg">
                 <img style={{height:"55px", margin:"auto"}} src={redLine} alt="" /><br/><br/>
                 <p style={{ letterSpacing: "2px", fontFamily: "fantasy", fontWeight: "100", fontSize: "30px", width:"80%", margin:"auto" }}>UNLOCK MORE FINGER LICKIN' GOOD BENEFITS</p>
                 <p style={{ letterSpacing: "1px", fontFamily: "sans-serif,Roboto", fontWeight: "500", fontSize: "12px" }}>Create an account to get access to exclusive deals and faster checkout.</p><br/><br/>
-                <div className="StartButton1" ><Link to={"/signin"} style={{ color: "white", textDecoration: "none" }} >Sign me up!</Link></div><br/><br/>
+                <div className="StartButton1" ><Link  onClick={()=>handleMenuOptionsClose()}  to={"/signin"} style={{ color: "white", textDecoration: "none" }} >Sign me up!</Link></div><br/><br/>
                 <img className="mainPickImage" src={mainPick} alt=""/>
               </div>
             </div>
