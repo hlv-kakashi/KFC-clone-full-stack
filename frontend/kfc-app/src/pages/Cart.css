@@ -91,3 +91,13 @@
      gap:100px;
      
 }
+
+@media all and (max-width:678px){
+   .cbox{
+    display: inline;
+   }
+   .rightSide_div{
+    position: static; 
+   }
+
+}

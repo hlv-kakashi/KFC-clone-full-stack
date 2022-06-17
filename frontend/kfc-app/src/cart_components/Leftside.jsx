@@ -21,8 +21,8 @@ const Leftside = () => {
 
   return (
     <div>
-        {cart.map((el)=>{
-            return <Cartproduct key={el.id} {...el}/>
+        {cart.map((el,index)=>{
+            return <Cartproduct key={index} {...el}/>
         })}
     </div>
   )

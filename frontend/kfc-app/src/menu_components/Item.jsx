@@ -64,7 +64,11 @@ const Item = ({_id,image,price,title,desc}) => {
 
 
            </div>)} </h3>
-          <img src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"/>
+          <img 
+          style={{cursor:"pointer"}}
+          onClick={()=>{
+            navigate("/cart")
+          }} src="https://online.kfc.co.in/static/media/Icon_Add_to_Cart.58b87a9b.svg"/>
        </div>
       </div>
     </div>

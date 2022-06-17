@@ -11,7 +11,7 @@
     width:80%;
     margin: auto;
 }
-.fsearchbox>div{
+.innersearch{
     display: grid;
     grid-template-columns: repeat(3,1fr)
 }
@@ -21,4 +21,14 @@
         display: grid;
         grid-template-columns: auto;
     }
+
+    .fsearchbox{
+        display: inline;
+        
+    }
+    .innersearch{
+        display: inline;
+        border: 1px solid blue;
+    }
+
 }

@@ -21,7 +21,7 @@ useEffect(()=>{
     <div className={styles.fsearchbox} >
         <h1>{search.length} RESULTS</h1>
         <h2>We found {search.length} "{val}"</h2>
-        <div>
+        <div className={styles.innersearch} >
           {search.length?
           search.map((el,index)=>{
           return <Item key={index} {...el}/>

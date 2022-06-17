@@ -21,7 +21,6 @@ const SingleProduct = () => {
        {single.map((el,index)=>{
         return <SingleItem key={index} {...el}/>
        })}
-
     </div>
   )
 }

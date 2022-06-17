@@ -3,6 +3,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react'
 import Item from "../menu_components/Item"
+import styles from "./cart.module.css"
 const Bottom = () => {
  let [recom,setrecom]= useState([]);
  useEffect(()=>{
@@ -15,7 +16,7 @@ const Bottom = () => {
   return (
     <>
     <h2>Top Recommended Meals</h2>
-        <div style={{display:"grid",gridTemplateColumns:"auto auto auto"}} >
+        <div className={styles.toprecom}  >
          {recom.map((el,index)=>{
           return(
            <Item key={index+Math.random()} {...el} />
