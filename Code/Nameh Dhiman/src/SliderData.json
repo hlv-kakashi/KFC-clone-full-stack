@@ -1,0 +1,170 @@
+
+{
+    "featured":[
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-PR00000921.jpg?ver=1.10",
+        "title": "Mingles Bucket Meal",
+        "desc": "Save Rs. 71 on 4 Hot Wings, 2 Chicken Strips, Reg Popcorn, medium fries & Pepsi PET [serves 2 ]",
+        "price": "₹479.05",
+        "type": "chicken"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-PR00000956.jpg?ver=1.10",
+        "title": "Mixed Zinger Doubles",
+        "desc": "Best-seller combo of classic chicken zinger & tandoori zinger",
+        "price": "₹348.57",
+        "type": "burger"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-PR00002092.jpg?ver=1.10",
+        "title": "10pc Strips with Nashville Sauce",
+        "desc": "Dipping combo of 10pc chicken strips & our new Nashville Hot Pepper Sauce Bottle [serves 2-3]",
+        "price": "₹639.05",
+        "type": "launch"
+      }
+    ],
+    "favorites":[
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-K445.jpg?ver=1.10",
+        "title": "5pc Smoky Red Chicken",
+        "desc": "Flat 20% off on 5pc Smoky red grilled chicken [serves 2]",
+        "price": "₹499.05",
+        "type": "chicken"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-PR00001023.jpg?ver=1.10",
+        "title": "2 Veg Krispers Meal",
+        "desc": "2 veg value burgers, crispy medium fries & 2 delicious dips at a deal price!",
+        "price": "₹268.57",
+        "type": "burger"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-PR00001004.jpg?ver=1.10",
+        "title": "Veg Zinger Box",
+        "desc": "A deal for the Veg Zinger lovers : Get 1 Veg Zinger, 2 Veg Patties & a Pepsi",
+        "price": "₹313.33",
+        "type": "boxmeals"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-PR00002016.jpg?ver=1.10",
+        "title": "Classic Biryani Combo",
+        "desc": "Large portions of Biryani rice with 2 pc Hot & Crispy, 2 Gravies, 4 Strips & Pepsi PET [serves 2-3]",
+        "price": "₹740.00",
+        "type": "stayhome"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-K486.jpg?ver=1.10",
+        "title": "Pepsi Black Can 330 ml",
+        "desc": "Pepsi Black Can 330 ml",
+        "price": "₹57.14",
+        "type": "beverages"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-K623.jpg?ver=1.10",
+        "title": "Classic Chicken Biryani Bucket",
+        "desc": "Hyderabadi style Biryani rice served with 1 pc Hot & Crispy & Spicy Gravy [serves 1]",
+        "price": "₹229.52",
+        "type": "biryani"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-PR00001003.jpg?ver=1.10",
+        "title": "Zinger Tandoori Box",
+        "desc": "A deal for the Tandoori lovers : Get 1 Tandoori Zinger, 2 Hot Wings, 1 Veg Patty & Pepsi",
+        "price": "₹313.33",
+        "type": "boxmeals"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-PR00000974.jpg?ver=1.10",
+        "title": "Family Feast",
+        "desc": "Family Deal of 3 chicken zingers, a medium popcorn, medium fries & a chilled Pepsi PET [serves 3]",
+        "price": "₹828.57",
+        "type": "stayhome"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-K223.jpg?ver=1.10",
+        "title": "Large Popcorn",
+        "desc": "Signature bite-sized boneless chicken, with special spices",
+        "type": "snacks",
+        "price": "₹228.57"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-K657.jpg?ver=1.10",
+        "title": "Double Chicken Roll",
+        "desc": "New street style roll with double chicken strips, onions and 2 spicy sauces [serves 1]",
+        "price": "₹170.48",
+        "type": "rolls"
+      }
+    ],
+    "quickbites":[
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-K146.jpg?ver=1.10",
+        "title": "Veg Zinger Burger",
+        "desc": "Signature veg burger with crispy patties, veggies & a tangy sauce",
+        "price": "₹179.05",
+        "type": "burger"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-PR00000892.jpg?ver=1.10",
+        "title": "Bucket for Two",
+        "desc": "Flat Rs. 115 off on combo of 2pc Hot & Crispy, 2 pc Smoky Red Chicken & Large Popcorn [serves 2-3]",
+        "price": "₹599.05",
+        "type": "chicken"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-PR00002070.jpg?ver=1.10",
+        "title": "Single Roll Combo for 1",
+        "desc": "Deal combo of 1 New Single Chicken Roll, Large Fries, 2 Dips & 1 Pepsi PET [serves 1]",
+        "price": "₹340.00",
+        "type": "rolls"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-K138.jpg?ver=1.10",
+        "title": "Large Fries",
+        "desc": "Jazz up your meal with crispy large fries!",
+        "type": "snacks",
+        "price": "₹119.05"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-K443.jpg?ver=1.10",
+        "title": "1 pc Smoky Red Chicken",
+        "desc": "Spicy, red, grilled chicken",
+        "type": "snacks",
+        "price": "₹124.76"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-K496.jpg?ver=1.10",
+        "title": "Choco Mud Pie",
+        "desc": "Chocolate lovers unite! Say hello to our creamy chocolate & cake dessert- a must try!",
+        "type": "snacks",
+        "price": "₹128.57"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-K617.jpg?ver=1.10",
+        "title": "Single Chicken Roll",
+        "desc": "New street style roll with single chicken strip, onions and 2 spicy sauces[serves 1]",
+        "price": "₹130.48",
+        "type": "rolls"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-PR00002069.jpg?ver=1.10",
+        "title": "Double Roll Combo for 1",
+        "desc": "Deal combo of 1 New Double Chicken Roll, Large Fries, 2 Dips & 1 Pepsi PET [serves 1]",
+        "price": "₹380.00",
+        "type": "rolls"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-K136.jpg?ver=1.10",
+        "title": "Regular Popcorn",
+        "desc": "Signature bite-sized boneless chicken, with special spices",
+        "type": "snacks",
+        "price": "₹115.24"
+      },
+      {
+        "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/lg/D-PR00002000.jpg?ver=1.10",
+        "title": "Chick’n Wings Combo",
+        "desc": "Enjoy 2pc Hot & Crispy Chicken, 4 wings , 2 dips & a chilled Pepsi Black [serves 1-2]",
+        "price": "₹450.48",
+        "type": "stayhome"
+      }
+    ]
+}
