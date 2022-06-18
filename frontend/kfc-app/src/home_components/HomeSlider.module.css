@@ -1,0 +1,270 @@
+.mainSliderDiv {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.commonSliderDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.commonSliderHeading {
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.commonSliderHeading > p {
+  margin-bottom: 0.5rem;
+}
+
+.commonSliderHeading > h2 {
+  margin-top: 0.5rem;
+}
+
+.itemDiv {
+  width: 18rem;
+  height: 25.75rem;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+}
+
+.itemDiv > p {
+  width: 95%;
+}
+
+.itemTitle {
+  font-size: 1rem;
+}
+
+.itemPrice {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.itemDesc {
+  font-size: 0.85rem;
+}
+
+.itemImg {
+  border-radius: 0.25rem;
+  width: 95%;
+  height: 65%;
+  object-fit: cover;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+
+.sliderProgress {
+  width: 80%;
+  margin: 4rem auto;
+}
+
+progress[value] {
+  /* style rules */
+  background: rgb(236, 236, 236);
+  height: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+
+progress[value]::-webkit-progress-bar {
+  /* style rules */
+  background: transparent;
+}
+progress[value]::-webkit-progress-value {
+  background: black;
+  height: 0.25rem;
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+}
+progress[value]::-moz-progress-bar {
+  /* style rules */
+  background: transparent;
+}
+
+@media all and (max-width: 1278px) and (min-width: 1024px) {
+
+  .commonSliderDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .commonSliderHeading {
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .commonSliderHeading > p {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+
+  .commonSliderHeading > h2 {
+    margin-top: 0.5rem;
+    font-size: 2.2rem;
+  }
+
+  .itemDiv {
+    height: 25.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .itemTitle {
+    font-size: 1rem;
+  }
+
+  .itemPrice {
+    font-size: 0.95rem;
+  }
+
+  .itemDesc {
+    font-size: 0.825rem;
+  }
+
+  .sliderProgress {
+    width: 80%;
+    margin: 3rem auto;
+  }
+}
+
+@media all and (max-width: 1023px) and (min-width: 769px) {
+  
+  .commonSliderDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .commonSliderHeading {
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .commonSliderHeading > p {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .commonSliderHeading > h2 {
+    margin-top: 0.5rem;
+    font-size: 1.95rem;
+  }
+  .sliderProgress {
+    width: 80%;
+    margin: 2rem auto;
+  }
+}
+
+@media all and (max-width: 768px) and (min-width: 480px) {
+  
+  .commonSliderDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .commonSliderHeading {
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .commonSliderHeading > p {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .commonSliderHeading > h2 {
+    margin-top: 0.5rem;
+    font-size: 1.75rem;
+  }
+
+  .itemDiv {
+    height: 25.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .itemTitle {
+    font-size: 0.955rem;
+  }
+
+  .itemPrice {
+    font-size: 0.9rem;
+  }
+
+  .itemDesc {
+    font-size: 0.8rem;
+  }
+  .sliderProgress {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}
+
+@media all and (max-width: 479px) {
+
+  .commonSliderHeading {
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .commonSliderHeading > p {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .commonSliderHeading > h2 {
+    margin-top: 0.5rem;
+    font-size: 1.75rem;
+  }
+
+  .itemDiv {
+    height: 25.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .itemTitle {
+    font-size: 0.955rem;
+  }
+
+  .itemPrice {
+    font-size: 0.9rem;
+  }
+
+  .itemDesc {
+    font-size: 0.8rem;
+  }
+  .sliderProgress {
+    width: 80%;
+    margin: 1rem auto;
+  }
+}

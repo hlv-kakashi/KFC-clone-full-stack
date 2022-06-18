@@ -1,0 +1,105 @@
+.body{
+    font-family: Arial, Helvetica, sans-serif ;
+}
+.cart_container{
+    width: 90%;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.my_cart_heading{
+    margin-top: 11px;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 48px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #202124;
+    
+}
+.reciept_heading{
+    margin-top: 11px;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 48px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #202124;
+}
+.offers_deals_container{
+    width: 250px;
+    height: 50px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAAA0CAYAAAD7VOHJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJbSURBVHgB7d3PcdpAFIDx9wQWks0hdEA6gA6SChJXkHSSdJBJBXYqsFOB6cDuIHQgH0TEX21YxpOxQVrOq/f9TkKr8ze70iLpslo4AQCDEgEAowggALMIIACzCCAAswggALMIIACzCCAAswggALMIIACzCCAAswggALMIIACzEle7XwIAxqjIrfqDqqrGKvXD/nAsANBt8+3OXQ+Hw6fDEjjP83m1XE9F9V4AoKP8ineQXU59/PxvPb6gWpS3mugXAYAucXKfXV5dvz51EsCiKN7lWfooLIcBdMfcz/xU9fn1SW26sizLSb+njwIAHeAkee9v9R2fb9wG49fHtat/CgBEzj/tbYrfy1izl6VwIQAQsbbZn9e6EXo0Gu3XyjoTAIiWztri5wX/CbJfBv8WAIjVmYYFA9jvy0wAIFJu555C48EALhabuQBApLLhNhhAlTP4cDqAWGX5VbBxvA0GgFnBAPqtMAIAkXIu3LBgALOsPxEAiNRmczEOjQcD6JwSQADRqrfyITQeDGCiyScBgFidaVjrE5KqKsYq6R8BgIgNsvVIdfTcNNY+A6wvvgsARG5VDb61jTXOAJn9AeiSpOemaTo82RR9MgP0j4338XsQAOiIeqd3TVtiTgK4qtIb4W3QALplvF6mP45P/g+gr+OqWtzsF8WfBQA6xol8XS3/vpkJHu4BlmUx6ffSO2HmB6D75k7WH/N8NFe+AgfAosOH0XnbCwCreBsMALMIIACzCCAAswggALMIIACzCCAAswggALMIIACzCCAAswggALMIIACzCCAAs/4BsqmdodGkXAsAAAAASUVORK5CYII=);
+    background-size: contain;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart_offers_text{
+    margin-left: 10px;
+    font-family: "National2-Medium";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #e4002b;
+}
+.viewAll_button{
+    width: 64px;
+    height: 27px;
+    text-align: center;
+    color: #202124;
+    border: 1.56px solid #202124;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 200px;
+    background-color: white;
+}
+.rightSide_div{
+    box-shadow: 0 4px 9px rgb(0 0 0 / 15%);
+    padding: 40px;
+    border-radius: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: max-content;
+}
+.donation_box{
+    width: 295px;
+    height: 122px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    display: flex;
+}
+
+.redButton {
+    margin-top: 20px;
+    width: 295px;
+    height: 50px;
+    border-radius: 44px;
+    background-color: #e4002b;
+    border: 1px solid #e4002b;
+    color: #fff;
+    cursor: pointer;
+}
+.cbox{
+     display: flex; 
+     justify-content: space-around;
+     gap:100px;
+     
+}
+
+@media all and (max-width:678px){
+   .cbox{
+    display: inline;
+   }
+   .rightSide_div{
+    position: static; 
+   }
+
+}
