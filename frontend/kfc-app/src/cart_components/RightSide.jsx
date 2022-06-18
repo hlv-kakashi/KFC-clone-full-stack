@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
+import axios from "axios";
 import "../pages/Cart.css"
 
 const RightSide = () => {
@@ -25,7 +26,42 @@ const RightSide = () => {
     const handleInput = () => {
       setInput(!input);
     };
- 
+    
+    const initPayment = (data) => {
+      const options = {
+        key: "",
+        amount: data.amount,
+        currency: data.currency,
+        name: "KFC",
+        description: "Test Transaction",
+        order_id: data.id,
+        handler: async (response) => {
+          try {
+            const verifyURL = "https://kfcapi.herokuapp.com/api/payment/verify";
+            const { data } = await axios.post(verifyURL, response);
+            console.log("data:", data);
+          } catch (err) {
+            console.log("err:", err);
+          }
+        },
+        theme: {
+          color: "#242873",
+        },
+      };
+      const rzp1 = new window.Razorpay(options);
+      rzp1.open();
+    };
+
+    const handlePayment = async () => {
+      try {
+        const orderURL = "https://kfcapi.herokuapp.com/api/payment/orders";
+        const { data } = await axios.post(orderURL, { amount: stotal });
+        console.log("data:", data);
+        initPayment(data.data);
+      } catch (err) {
+        console.log("err:", err);
+      }
+    };
     
   return (
     <>
@@ -108,7 +144,7 @@ const RightSide = () => {
               <p>Checkout</p>
               <p>₹{!input?stotal:stotal+5}</p>
             </div>
-          </button>):(   <button  className="redButton">
+          </button>):(   <button onClick={handlePayment} className="redButton">
             <div style={{ display: "flex", justifyContent: "space-around" }}>
               <p>Payment</p>
               <p>₹{!input?stotal:stotal+5}</p>
