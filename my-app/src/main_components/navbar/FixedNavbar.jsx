@@ -21,7 +21,7 @@ import mainPick from "../../assets/svg/mainPick.svg"
 import { useState } from "react"
 const MainFixPartOfNavbar = styled.div`
     ${'' /* font-family:"Helvetica Neue", "sans-serif"; */}
-
+    text-align: center;
 .firstDiv{
     font-size:16px;
     position:fixed;

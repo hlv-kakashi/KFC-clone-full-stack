@@ -6,6 +6,7 @@ import setting from "../../assets/svg/setting.svg"
 import data from "./restaurant.json"
 import RestaurantCard from './RestaurantCard'
 const FindSearchPartStyled = styled.div`
+ text-align: center;
 .findMapPart{
     padding-top:100px;
     padding-bottom:5px;

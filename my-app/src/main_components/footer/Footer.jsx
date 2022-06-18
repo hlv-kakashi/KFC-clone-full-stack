@@ -7,6 +7,7 @@ import twitter from "../../assets/svg/twitter.svg"
 import footkfc from "../../assets/svg/footkfc.svg"
 
 const FooterStyled = styled.div`
+ text-align: center;
 .footermaindiv{
     
     background-color: rgb(32, 33, 36);
