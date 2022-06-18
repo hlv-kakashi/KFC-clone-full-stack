@@ -12,10 +12,20 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
 
   let navigate = useNavigate();
+  const notify = () =>
+    toast.success("Account Created Successfully", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
 
   async function registerUser(event) {
     event.preventDefault();
-    const response = await fetch("http://localhost:8080/Auth/signup", {
+    const response = await fetch("https://kfcapi.herokuapp.com/Auth/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -28,8 +38,8 @@ const SignUp = () => {
       }),
     });
     const data = await response.json();
-    if (data.user) {
-      alert("Acc Created");
+    if (data) {
+      notify();
       const timer = setTimeout(() => {
         navigate("/api/Auth/login");
       }, 2000);
@@ -150,3 +160,5 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+

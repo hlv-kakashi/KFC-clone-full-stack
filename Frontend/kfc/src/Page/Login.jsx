@@ -30,7 +30,7 @@ const Login = () => {
 
   async function loginUser(event) {
     event.preventDefault();
-    const response = await fetch("http://localhost:8080/Auth/login", {
+    const response = await fetch("https://kfcapi.herokuapp.com/Auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -131,3 +131,7 @@ const Login = () => {
 };
 
 export default Login;
+
+
+
+

@@ -21,7 +21,7 @@ const Payment = () => {
       order_id: data.id,
       handler: async (response) => {
         try {
-          const verifyURL = "http://localhost:8080/api/payment/verify";
+          const verifyURL = "https://kfcapi.herokuapp.com/api/payment/verify";
           const { data } = await axios.post(verifyURL, response);
           console.log("data:", data);
         } catch (err) {
@@ -38,7 +38,7 @@ const Payment = () => {
 
   const handlePayment = async () => {
     try {
-      const orderURL = "http://localhost:8080/api/payment/orders";
+      const orderURL = "https://kfcapi.herokuapp.com/api/payment/orders";
       const { data } = await axios.post(orderURL, { amount: book.price });
       console.log("data:", data);
       initPayment(data.data);
@@ -61,3 +61,7 @@ const Payment = () => {
 };
 
 export default Payment;
+
+
+
+
