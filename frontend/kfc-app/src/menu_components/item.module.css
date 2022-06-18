@@ -49,7 +49,7 @@
 .sidebox{
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 150px;
     height: max-content;
 }
 .sidebox>img{

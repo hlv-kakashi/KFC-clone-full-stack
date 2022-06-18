@@ -4,6 +4,8 @@
 .cart_container{
     width: 90%;
     margin: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 .my_cart_heading{
     margin-top: 11px;

@@ -1,12 +1,18 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { useLocation, useNavigate } from 'react-router-dom';
 import "../pages/Cart.css"
 
 const RightSide = () => {
     const [input, setInput] = useState(false);
     const [stotal,setstotal]= useState(0);
     const cart= useSelector((state)=>state.cart)
+    const navigate= useNavigate();
+    const location = useLocation();
+    console.log(location.pathname)
+    let path= location.pathname;
+
     useEffect(()=>{
       let total= cart.reduce((acc,el)=>{
         let price= el.price.substring(1);
@@ -97,12 +103,18 @@ const RightSide = () => {
               />
             </div>
           </div>
-          <button className="redButton">
+          {path=="/cart"?(   <button onClick={()=>navigate("/checkout")} className="redButton">
             <div style={{ display: "flex", justifyContent: "space-around" }}>
               <p>Checkout</p>
               <p>₹{!input?stotal:stotal+5}</p>
             </div>
-          </button>
+          </button>):(   <button  className="redButton">
+            <div style={{ display: "flex", justifyContent: "space-around" }}>
+              <p>Payment</p>
+              <p>₹{!input?stotal:stotal+5}</p>
+            </div>
+          </button>)}
+       
     </>
   )
 }

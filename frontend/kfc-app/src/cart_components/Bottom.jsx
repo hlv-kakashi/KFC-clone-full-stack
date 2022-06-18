@@ -19,7 +19,7 @@ const Bottom = () => {
         <div className={styles.toprecom}  >
          {recom.map((el,index)=>{
           return(
-           <Item key={index+Math.random()} {...el} />
+           <Item key={index} {...el} />
           )
          })}
         </div>

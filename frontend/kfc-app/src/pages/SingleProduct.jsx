@@ -17,7 +17,7 @@ const SingleProduct = () => {
     },[])
     
   return (
-    <div>
+    <div style={{marginTop:"70px",marginBottom:"70px"}} >
        {single.map((el,index)=>{
         return <SingleItem key={index} {...el}/>
        })}
