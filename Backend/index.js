@@ -13,7 +13,12 @@ const helmet = require("helmet");
 const server = express();
 
 server.use(express.urlencoded({ extended: true }));
-server.use(cors());
+server.use(
+  cors({
+    origin: ["http://localhost:3000"],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 server.use(helmet());
 server.use(express.json());
 
