@@ -3,6 +3,10 @@ require("dotenv").config({ path: "./.env" });
 const connection = require("./Database/db");
 const userAuthRouter = require("./routes/userAuth.route");
 const paymentRouter = require("./routes/paymentIntegrate.route");
+const menuRouter = require("./routes/menu.route");
+const cartRouter = require("./routes/cart.route");
+const searchRouter = require("./routes/serach.route");
+const landingRouter = require("./routes/landing.route");
 const cors = require("cors");
 const helmet = require("helmet");
 
@@ -18,6 +22,10 @@ server.get("/", (req, res) => {
 });
 
 server.use("/Auth", userAuthRouter);
+server.use("/api/home", landingRouter);
+server.use("/api/searchapi", searchRouter);
+server.use("/api/product", menuRouter);
+server.use("/api/productcart", cartRouter);
 server.use("/api/payment", paymentRouter);
 
 const PORT = process.env.PORT || 8080;
