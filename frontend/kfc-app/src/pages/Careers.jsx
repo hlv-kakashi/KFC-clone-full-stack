@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CareersAbout.module.css';
 
-let imgSrc = require('./careers.png')
+let imgSrc = require('./careers.jpg')
 
 const Careers = () => {
   return (

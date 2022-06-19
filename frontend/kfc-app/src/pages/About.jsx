@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./CareersAbout.module.css";
 
-let imgsrc = require("./about.png");
+let imgsrc = require("./about.jpg");
 
 const About = () => {
   return (
@@ -11,4 +11,4 @@ const About = () => {
   );
 }
 
-export default About
+export default About;
