@@ -14,7 +14,7 @@ const NewLaunch = () => {
     },[])
     
      const fetchData= async()=>{
-        let payload= await getdata("https://kfc-aman.herokuapp.com/menu?type=launch");
+        let payload= await getdata("https://kfcapi.herokuapp.com/api/product/menu?type=launch");
          dispatch(addlaunch(payload));
      }
 

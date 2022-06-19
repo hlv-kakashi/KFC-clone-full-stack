@@ -13,7 +13,7 @@ const Snacks = () => {
     },[])
     
      const fetchData= async()=>{
-        let payload= await getdata("https://kfc-aman.herokuapp.com/menu?type=snacks");
+        let payload= await getdata("https://kfcapi.herokuapp.com/api/product/menu?type=snacks");
          dispatch(addsnacks(payload));
      }
 

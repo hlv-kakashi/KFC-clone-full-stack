@@ -1,32 +1,32 @@
 import React, { useState } from "react";
 // import Header from "../components/Header";
-import Header from "../AuthHeader_Component/AuthHeader";
+// import Header from "../AuthHeader_Component/AuthHeader";
 import "./login.css";
 import { Link, useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const notify = () =>
-    toast.success("Login Successful", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
-  const notify2 = () =>
-    toast.warning("Please check Email or Password", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      newestOnTop: false,
-      rtl: false,
-    });
+  // const notify = () =>
+  //   toast.success("Login Successful", {
+  //     position: "top-center",
+  //     autoClose: 5000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //   });
+  // const notify2 = () =>
+  //   toast.warning("Please check Email or Password", {
+  //     position: "top-center",
+  //     autoClose: 5000,
+  //     hideProgressBar: false,
+  //     newestOnTop: false,
+  //     rtl: false,
+  //   });
   let navigate = useNavigate();
 
   async function loginUser(event) {
@@ -44,20 +44,22 @@ const Login = () => {
     const data = await response.json();
     if (data.user) {
       localStorage.setItem("token", data.user);
-      notify();
+      // notify();
+      alert("Login Successful")
       const timer = setTimeout(() => {
         navigate("/");
       }, 2000);
       return () => clearTimeout(timer);
     } else {
-      notify2();
+      // notify2();
+      alert("Please check Email or Password")
     }
     console.log("data:", data);
   }
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <section className="loginSection">
         <div id="loginSvgdiv">
           <div className="loginSvgdiv2">
@@ -126,7 +128,7 @@ const Login = () => {
           </div>
         </div>
       </section>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
     </>
   );
 };

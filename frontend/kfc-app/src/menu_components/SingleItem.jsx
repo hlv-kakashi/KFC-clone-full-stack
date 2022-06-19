@@ -30,7 +30,7 @@ const navigate= useNavigate()
             const el={
                 id:_id,image,price,title,desc,qty:count+1
             }
-            axios.post("https://kfc-aman.herokuapp.com/cart",el)
+            axios.post("https://kfcapi.herokuapp.com/api/productcart/cart",el)
             .then(()=>dispatch(addcart(el)))
             
             }}> Add to cart</p>):(<div>
@@ -42,7 +42,7 @@ const navigate= useNavigate()
              const el={
                 id:_id,image,price,title,desc,qty:count-1
             }
-            axios.put(`https://kfc-aman.herokuapp.com/cart/${_id}`,el)
+            axios.put(`https://kfcapi.herokuapp.com/api/productcart/cart/${_id}`,el)
             .then(()=>{
               dispatch(addcartcount(el));
             })
@@ -57,7 +57,7 @@ const navigate= useNavigate()
             const el={
                 id:_id,image,price,title,desc,qty:count+1
             }
-            axios.put(`https://kfc-aman.herokuapp.com/cart/${_id}`,el)
+            axios.put(`https://kfcapi.herokuapp.com/api/productcart/cart/${_id}`,el)
             .then(()=>{
               dispatch(addcartcount(el));
             })

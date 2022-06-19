@@ -15,7 +15,7 @@ const Leftside = () => {
     },[])
   
     const fetchdata= async ()=>{
-     let payload= await getdata("https://kfc-aman.herokuapp.com/cart");
+     let payload= await getdata("https://kfcapi.herokuapp.com/api/productcart/cart");
      dispatch(getCart(payload));
     }   
 

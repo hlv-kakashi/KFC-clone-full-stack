@@ -244,7 +244,7 @@ const FindKFC = () => {
                             <div className="browseOurDirectoryAddres"><b>Current Location:</b> {address}</div>
                             <div className='restaurantCard'>                                
                                 {   
-                                    data.restaurantDetails.map((e)=><RestaurantCard {...e}/>)
+                                    data.restaurantDetails.map((e)=><RestaurantCard key={e.contact} {...e}/>)
                                 }
                             </div>
                             </>

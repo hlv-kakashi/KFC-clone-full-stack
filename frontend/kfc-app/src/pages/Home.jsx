@@ -5,7 +5,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { BsPlayFill, BsPauseFill, BsArrowRight } from "react-icons/bs";
 import { CgClose } from "react-icons/cg";
 import styles from "./Home.module.css";
-
 import QuickBites from "../home_components/QuickBites";
 import Favorites from "../home_components/Favorites";
 import Featured from "../home_components/Featured";

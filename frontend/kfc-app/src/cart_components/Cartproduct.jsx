@@ -23,7 +23,7 @@ acprice=Number(acprice);
                 <h3
                 style={{cursor:'pointer'}}
                 onClick={()=>{
-                  axios.delete(`https://kfc-aman.herokuapp.com/cart/${id}`)
+                  axios.delete(`https://kfcapi.herokuapp.com/api/productcart/cart/${id}`)
                 }}
                 >Remove</h3>
             </div>
@@ -35,7 +35,7 @@ acprice=Number(acprice);
                   const el={
                     id:id,image,price,title,desc,qty:count-1
                   }
-                  axios.put(`https://kfc-aman.herokuapp.com/cart/${id}`,el)
+                  axios.put(`https://kfcapi.herokuapp.com/api/productcart/cart/${id}`,el)
                   .then(({data})=>{
                     dispatch(addcartcount(el));
                     setCount(count-1);
@@ -52,7 +52,7 @@ acprice=Number(acprice);
                 const el={
                 id:id,image,price,title,desc,qty:count+1
                 }
-                axios.put(`https://kfc-aman.herokuapp.com/cart/${id}`,el)
+                axios.put(`https://kfcapi.herokuapp.com/api/productcart/cart/${id}`,el)
                .then(({data})=>{
                 setCount(count+1)
                 dispatch(addcartcount(el));

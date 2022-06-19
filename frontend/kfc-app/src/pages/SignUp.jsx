@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Header from "../AuthHeader_Component/AuthHeader";
+// import Header from "../AuthHeader_Component/AuthHeader";
 import "./signup.css";
 import { Link, useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
   const [firstname, setFirstname] = useState("");
@@ -12,16 +12,16 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
 
   let navigate = useNavigate();
-  const notify = () =>
-    toast.success("Account Created Successfully", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    });
+  // const notify = () =>
+  //   toast.success("Account Created Successfully", {
+  //     position: "top-center",
+  //     autoClose: 5000,
+  //     hideProgressBar: false,
+  //     closeOnClick: true,
+  //     pauseOnHover: true,
+  //     draggable: true,
+  //     progress: undefined,
+  //   });
 
   async function registerUser(event) {
     event.preventDefault();
@@ -39,7 +39,8 @@ const SignUp = () => {
     });
     const data = await response.json();
     if (data) {
-      notify();
+      // notify();
+      alert("Account Created Successfully");
       const timer = setTimeout(() => {
         navigate("/api/Auth/login");
       }, 2000);
@@ -49,7 +50,7 @@ const SignUp = () => {
   }
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <section className="signupsection">
         <div id="singupsvgdiv">
           <div className="signupsvgdiv2">
@@ -154,11 +155,9 @@ const SignUp = () => {
           </div>
         </div>
       </section>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
     </>
   );
 };
 
 export default SignUp;
-
-

@@ -13,7 +13,7 @@ const StayHome = () => {
     },[])
     
      const fetchData= async()=>{
-        let payload= await getdata("https://kfc-aman.herokuapp.com/menu?type=stayhome");
+        let payload= await getdata("https://kfcapi.herokuapp.com/api/product/menu?type=stayhome");
          dispatch(addstayhome(payload));
      }
 

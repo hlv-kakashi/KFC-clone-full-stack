@@ -32,8 +32,8 @@ const RightSide = () => {
         key: "",
         amount: data.amount,
         currency: data.currency,
-        name: "KFC",
-        description: "Test Transaction",
+        name: "Kentucky Fried Chicken",
+        description: "You Total Amount",
         order_id: data.id,
         handler: async (response) => {
           try {
@@ -45,7 +45,7 @@ const RightSide = () => {
           }
         },
         theme: {
-          color: "#242873",
+          color: "#a50000",
         },
       };
       const rzp1 = new window.Razorpay(options);

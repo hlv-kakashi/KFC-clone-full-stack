@@ -10,7 +10,7 @@ const Search = () => {
 const [search,setSearch]= useState([]);
 let val= localStorage.getItem("search");
 useEffect(()=>{
-    axios.get(`https://kfc-aman.herokuapp.com/item/?search=${val}`)
+    axios.get(`https://kfcapi.herokuapp.com/api/searchapi/item/?search=${val}`)
     .then(({data})=>{
         setSearch(data)
     })

@@ -11,7 +11,7 @@ const Chicken = () => {
         fetchData();
     },[])
      const fetchData= async()=>{
-        let payload= await getdata("https://kfc-aman.herokuapp.com/menu?type=chicken");
+        let payload= await getdata("https://kfcapi.herokuapp.com/api/product/menu?type=chicken");
          dispatch(addchicken(payload));
      }
   

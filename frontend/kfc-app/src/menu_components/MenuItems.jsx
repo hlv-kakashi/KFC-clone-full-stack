@@ -1,4 +1,3 @@
-
 import Beverages from "./Beverages"
 import Biryani from "./Biryani"
 import Box from "./Box"

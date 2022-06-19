@@ -14,7 +14,7 @@ const Rolls = () => {
     },[])
     
      const fetchData= async()=>{
-        let payload= await getdata("https://kfc-aman.herokuapp.com/menu?type=rolls");
+        let payload= await getdata("https://kfcapi.herokuapp.com/api/product/menu?type=rolls");
          dispatch(addrolls(payload));
      }
   return (
