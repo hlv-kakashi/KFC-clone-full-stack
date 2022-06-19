@@ -228,9 +228,9 @@ const FindKFC = () => {
                     <p style={{ letterSpacing: "1px", fontFamily: "fantasy", fontWeight: "100", fontSize: "32px" }}>Find a KFC Location</p>
                     <p style={{ letterSpacing: "1px", fontFamily: "sans-serif,Roboto", fontWeight: "600", fontSize: "15px" }}>SEARCH BY CITY AND STATE OR ZIP CODE</p>
                     <div className='inputSearchForLocationDiv'>
-                        <form onSubmit={findLocat}>
+                        <form onSubmit={findLocat} style={{display:"flex"}} >
                             <input className='inputSearchForLocation' type="text" placeholder="Louisville, KY" onChange={(e) => handleLocation(e.target.value)} />
-                            <img className='inputSearchForLocationImg1' style={{ padding: "0vw 1vw", cursor: "pointer" }} src={search} onClick={handleLocation} alt="" />
+                            <img className='inputSearchForLocationImg1' style={{ padding: "0vw 1vw", cursor: "pointer" }} src={search} onClick={()=>handleLocation} alt="" />
                             <img className='inputSearchForLocationImg2' style={{ padding: "0vw 1vw", cursor: "pointer" }} src={setting} alt="" />
                         </form>
                     </div>
