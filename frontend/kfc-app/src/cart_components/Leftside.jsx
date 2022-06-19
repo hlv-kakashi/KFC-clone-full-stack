@@ -10,9 +10,10 @@ import Cartproduct from './Cartproduct';
 const Leftside = () => {
     const dispatch = useDispatch()
     const cart= useSelector((state)=>state.cart);
+    
     useEffect(()=>{
       fetchdata()
-    },[])
+    },[cart])
   
     const fetchdata= async ()=>{
      let payload= await getdata("https://kfcapi.herokuapp.com/api/productcart/cart");
@@ -22,7 +23,7 @@ const Leftside = () => {
   return (
     <div>
         {cart.map((el,index)=>{
-            return <Cartproduct key={index}  {...el}/>
+            return <Cartproduct key={index}  {...el} fetchData={fetchdata} />
         })}
     </div>
   )

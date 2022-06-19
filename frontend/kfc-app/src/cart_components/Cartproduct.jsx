@@ -4,13 +4,20 @@ import styles from "./cart.module.css"
 import axios from "axios"
 import { useDispatch, useSelector } from 'react-redux'
 import { addcartcount } from '../redux/action'
+import { useEffect } from 'react'
 
-const Cartproduct = ({desc,id,image,price,qty,title,_id}) => {
-
+const Cartproduct = ({desc,id,image,price,qty,title,_id, fetchData}) => {
 const dispatch= useDispatch();
 const [count,setCount]= useState(qty);
 let acprice=price.substring(1)
 acprice=Number(acprice);
+
+const handleRemove = () =>{
+  axios.delete(`https://kfcapi.herokuapp.com/api/productcart/cart/${id}`)
+  fetchData();
+  console.log("Deleted")
+}
+
   return (
     <div className={styles.cartproductmain} >
         <div className={styles.cartproductleft}>
@@ -22,9 +29,7 @@ acprice=Number(acprice);
                 </ul>
                 <h3
                 style={{cursor:'pointer'}}
-                onClick={()=>{
-                  axios.delete(`https://kfcapi.herokuapp.com/api/productcart/cart/${id}`)
-                }}
+                onClick={handleRemove}
                 >Remove</h3>
             </div>
         </div>
