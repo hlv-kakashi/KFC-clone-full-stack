@@ -6,7 +6,7 @@ Goal behind the project was to create a full stack clone of the KFC website as c
 This project was built by a team of 6 developers in 5 Days. 
 </p>
 
-<!-- * [Click Here](https://nameh-dhiman.github.io/Apple-TV-Clone-Project.github.io/ "Apple TV+ Project") to view the deployed website. -->
+* [Click Here](https://clone-kfc.netlify.app/ "KFC Clone") to view the deployed website.
 
 <p>
 KFC (Kentucky Fried Chicken) is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken. 
