@@ -2,7 +2,7 @@
 ---
 <p>
 This was a collaborative construct week project at Masai School.
-Goal behind the project was to create a clone of the KFC website as close as possible to the original one with all the major functionalities of this website, such as * Authentication, Landing Page & Food Gallery, Menu, User Cart, Checkout, Payment Gateway.
+Goal behind the project was to create a clone of the KFC website as close as possible to the original one with all the major functionalities of this website, such as  Authentication, Landing Page & Food Gallery, Menu, User Cart, Checkout, Payment Gateway.
 This project was built by a team of 6 developers in 5 Days. 
 </p>
 
@@ -10,9 +10,9 @@ This project was built by a team of 6 developers in 5 Days.
 
 <p>
 KFC (Kentucky Fried Chicken) is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken. 
-It is the world's second-largest restaurant chain after McDonald's, with 22,621 locations globally in 150 countries. 
+It is the world's second-largest restaurant chain after McDonald's.
 KFC was founded by Colonel Harland Sanders, an entrepreneur who began selling fried chicken from his roadside restaurant in Corbin, Kentucky. 
-KFC popularized chicken in the fast-food industry, diversifying the market by challenging the established dominance of the hamburger. By branding himself as "Colonel Sanders", Harland became a prominent figure of American cultural history and his image remains widely used in KFC advertising to this day.
+By branding himself as "Colonel Sanders", Harland became a prominent figure of American cultural history and his image remains widely used in KFC advertising to this day.
 KFC was one of the first American fast-food chains to expand internationally, opening outlets in Canada, the United Kingdom, Mexico and Jamaica by the mid-1960s. 
 </p>
 
