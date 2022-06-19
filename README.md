@@ -52,7 +52,6 @@ ___
 ___
 <br/>
 ![screehshot2](https://miro.medium.com/max/1400/1*OBk1DWRx516zaSBgJZ7PrA.jpeg)
-___
 <br/>
 ![screehshot3](https://miro.medium.com/max/1400/1*WQIFiH_I3wTtJZxBQQOs9w.jpeg)
 ___
