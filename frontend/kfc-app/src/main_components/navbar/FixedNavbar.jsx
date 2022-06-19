@@ -263,7 +263,7 @@ export const FixedNavbar = () => {
           </div>
           <div className="toggleNavbar">
             <div className="toggleNavbar1">
-              <Link to={"/"}><img height={"15rem"} style={{ padding: "0.3vw 1vw" }} src={menuNav2} onClick={handleMenuOptions} alt="" /></Link>
+              <Link to={"#"}><img height={"15rem"} style={{ padding: "0.3vw 1vw" }} src={menuNav2} onClick={handleMenuOptions} alt="" /></Link>
               <Link to={"/"}><img height={"21rem"} style={{ padding: "0.3vw 1vw" }} src={KFClogo} alt="" /></Link>
               <Link to={"/cart"}><img height={"20rem"} style={{ padding: "0.3vw 1vw" }} src={cart} alt="" /></Link>
             </div>
@@ -285,7 +285,7 @@ export const FixedNavbar = () => {
             </div>
             <div>
               <p style={{ letterSpacing: "1px", fontFamily: "fantasy", fontSize: "32px", textAlign:"left", padding:"20px 20px 10px 5vw" }}>LET'S GET COOKIN'</p>
-              <h4 style={{textAlign:"left", paddingLeft:"5vw"}}>Sign In / Sign Up <img height={"7rem"} style={{alignItems:"center"}} src={menuarrowsmall} alt="" /></h4>
+              <h4 style={{textAlign:"left", paddingLeft:"5vw"}}><Link to={"/api/Auth/login"}>Sign In / Sign Up </Link><img height={"7rem"} style={{alignItems:"center"}} src={menuarrowsmall} alt="" /></h4>
               <div className="MenuPartDiv ">
                 <p className="SmallMediaLinks" style={{padding:"20px"}}><Link  onClick={()=>handleMenuOptionsClose()}  to={"/menu"} >MENU</Link></p>
                 <img className="MenuPartImg" src={menu1} alt=""/>
