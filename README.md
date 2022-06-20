@@ -76,4 +76,10 @@ ___
         <li><a href="https://github.com/mdarshadkhan1998">MD Arshad Khan</a></li>
         <li><a href="https://github.com/hlv-kakashi">Anupam Kumar</a></li>
         <li><a href="https://github.com/arpitchaudhary03">Arpit Chaudhary</a></li>
-    </ul>
+  </ul>
+  
+ ### Contributing
+ ___
+ Contributions are always welcome!<br><br>
+ You can contribute with us to make this more functionable.
+   
