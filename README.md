@@ -33,6 +33,7 @@ ___
 * Redux JS 
 * Node JS
 * Express JS
+* MongoDB
 * React Icons
 * React Slick
 * Git
