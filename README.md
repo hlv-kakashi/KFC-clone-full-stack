@@ -68,9 +68,11 @@ ___
 
 ### Team
 ___
-* Nameh Dhiman
-* Arpit Surana
-* Aman Jaiswal
-* MD Arshad Khan
-* Anupam Kumar
-* Arpit Chaudhary
+ <ul>
+        <li><a href="https://github.com/Nameh-Dhiman">Nameh Dhiman</a></li>
+        <li><a href="https://github.com/suranaarpit">Arpit Surana</a></li>
+        <li> <a href="https://github.com/AmanJaiswal0612">Aman Jaiswal</a> </li>
+        <li><a href="https://github.com/mdarshadkhan1998">MD Arshad Khan</a></li>
+        <li><a href="https://github.com/hlv-kakashi">Anupam Kumar</a></li>
+        <li><a href="https://github.com/arpitchaudhary03">Arpit Chaudhary</a></li>
+    </ul>
